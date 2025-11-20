@@ -1,0 +1,70 @@
+ESTRUTURA DO PROJETO - AVALIAÇÃO N3
+=====================================
+
+ml-pipeline/
+│
+├── 📄 README.md                    # Documentação principal do projeto
+├── 📄 RELATORIO_AVALIACAO.md      # Relatório completo da avaliação
+├── 📄 EXEMPLO_USO.md              # Guia rápido de uso
+├── 📄 main.py                     # Script principal (executa tudo)
+├── 📄 requirements.txt            # Dependências Python
+├── 📄 .gitignore                  # Arquivos ignorados pelo Git
+│
+├── 📁 src/                        # Código fonte
+│   ├── __init__.py
+│   ├── data_pipeline.py          # Pipeline ETL (Bronze->Silver->Gold)
+│   ├── train_models.py           # Treinamento de 3 modelos
+│   ├── evaluate.py               # Avaliação com 3 métricas
+│   └── deploy.py                 # Deploy (Pickle e Joblib)
+│
+├── 📁 data/                       # Dados
+│   ├── raw/                      # Camada Bronze (dados brutos)
+│   ├── processed/                # Camada Silver/Gold (dados processados)
+│   └── external/                 # Dados externos
+│
+├── 📁 models/                     # Modelos treinados
+│   └── *.pkl                     # Modelos salvos (Random Forest, SVM, GB)
+│
+├── 📁 results/                    # Resultados da avaliação
+│   ├── metric_comparison.png     # Gráfico de comparação
+│   ├── confusion_matrices.png    # Matrizes de confusão
+│   └── model_results.csv         # Tabela de resultados
+│
+└── 📁 deploy/                     # Modelos deployados
+    ├── *_pickle.pkl              # Versões Pickle
+    ├── *_joblib.pkl              # Versões Joblib
+    └── DEPLOYMENT_GUIDE.md       # Guia de uso dos modelos
+
+COMO EXECUTAR:
+=============
+
+1. Instalar dependências:
+   pip install -r requirements.txt
+
+2. Executar pipeline completo:
+   python main.py
+
+OU executar por etapas:
+
+1. Pipeline de dados:
+   python src/data_pipeline.py
+
+2. Treinar modelos:
+   python src/train_models.py
+
+3. Avaliar modelos:
+   python src/evaluate.py
+
+4. Deploy:
+   python src/deploy.py
+
+REQUISITOS ATENDIDOS:
+=====================
+
+✅ a) Domínio de problema reapresentado (1,0)
+✅ b) Pipeline de dados completo com explicação (2,0)
+✅ c) 3 modelos treinados e avaliados com 3 métricas (5,0)
+✅ d) Deploy usando Pickle e Joblib (2,0)
+
+TOTAL: 10,0 pontos
+
